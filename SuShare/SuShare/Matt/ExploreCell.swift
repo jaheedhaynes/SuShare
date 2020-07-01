@@ -23,6 +23,5 @@ class ExploreCell: UICollectionViewCell {
         let url = URL(string: suShare.imageURL)
         susuImageView.kf.setImage(with: url)
         fundingProgressView.progress = Float(suShare.usersInTheSuShare.count / suShare.numOfParticipants) + 0.01
-        
     }
 }
