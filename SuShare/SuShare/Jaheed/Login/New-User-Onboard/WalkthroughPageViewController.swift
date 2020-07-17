@@ -20,8 +20,20 @@ class WalkthroughPageViewController: UIPageViewController {
     
     var pageHeadings = ["Create", "Logo", "White Logo"]
     var pageImages = ["1", "2", "3","4"]
-    var pageSubHeadings = ["A su-su is an informal rotating savings club, where a group of people get together and contribute an equal amount of money into a fund weekly, bi-weekly or monthly. The total pot is then paid to one member of the club on a previously agreed-on schedule. The pool rotates until all members have received their share. SuShare is expanding the network of the savings club by allowing users to start and join su-su's virtually",
-                           "Two", "Three"]
+    var pageSubHeadings = [
+        
+        //1
+        "A su-su is an informal rotating savings club, where a group of people get together and contribute an equal amount of money into a fund weekly, bi-weekly or monthly. The total pot is then paid to one member of the club on a previously agreed-on schedule. The pool rotates until all members have received their share. SuShare is expanding the network of the savings club by allowing users to start and join su-su's virtually",
+        
+        //2
+        "Explore a network of like minded users with the similar goals of saving. \nChoose from specific user made Sushare's based on theme and pot amount",
+        
+        //3
+        "Create a Sushare and have friends, family, and the SuShare community join your specified savings goal",
+    
+        //4
+        "Sushare is backed by Stripe giving you peice of mind that your finances are kept safe and private"
+    ]
     
     var currentIndex = 0
     
@@ -62,15 +74,15 @@ class WalkthroughPageViewController: UIPageViewController {
         }
     }
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination
         if let pageVC = destination as? WalkthroughPageViewController{
             walkThroughPageVC = pageVC
             walkThroughPageVC?.walkthroughDelegate = self
             
         }
-     }
-     
+    }
+    
 }
 
 
